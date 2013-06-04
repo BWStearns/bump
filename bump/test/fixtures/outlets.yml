@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  articles: 
+  distribution: 1
+  state: MyString
+
+two:
+  name: MyString
+  articles: 
+  distribution: 1
+  state: MyString

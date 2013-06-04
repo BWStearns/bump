@@ -1,0 +1,29 @@
+<h1>Listing outlets</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Articles</th>
+    <th>Distribution</th>
+    <th>State</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @outlets.each do |outlet| %>
+  <tr>
+    <td><%= outlet.name %></td>
+    <td><%= outlet.articles %></td>
+    <td><%= outlet.distribution %></td>
+    <td><%= outlet.state %></td>
+    <td><%= link_to 'Show', outlet %></td>
+    <td><%= link_to 'Edit', edit_outlet_path(outlet) %></td>
+    <td><%= link_to 'Destroy', outlet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Outlet', new_outlet_path %>

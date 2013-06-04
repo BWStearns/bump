@@ -1,0 +1,72 @@
+<div class="row">
+  <div class="well">
+    <p>
+      <b>Title:</b>
+      <%= @article.title %>
+    </p>
+
+    <p>
+      <b>Article body:</b>
+      <%= @article.article_body %>
+    </p>
+
+    <p>
+      <b>Author:</b>
+      <%= @article.author %>
+    </p>
+
+    <p>
+      <b>Analyst:</b>
+      <%= @article.analyst.name %>
+    </p>
+
+    <p>
+      <b>Outlet:</b>
+      <%= @article.outlet.name %>
+    </p>
+
+    <p>
+      <b>Submitted:</b>
+      <%= @article.submitted %>
+    </p>
+
+    <p>
+      <b>Pubdate:</b>
+      <%= @article.pubdate %>
+    </p>
+
+    <p>
+      <b>State:</b>
+      <%= @article.state %>
+    </p>
+
+    <p>
+      <b>Summary:</b>
+      <%= @article.summary %>
+    </p>
+
+    <p>
+      <b>Url:</b>
+      <%= @article.url %>
+    </p>
+
+    <p>
+      <b>Loe:</b>
+      <%= @article.loe.map(&:name).map(&:inspect).join(', ')%>
+    </p>
+
+    <p>
+      <b>Distribution:</b>
+      <%= @article.distribution %>
+    </p>
+
+    <p>
+      <b>Most important:</b>
+      <%= @article.most_important %>
+    </p>
+
+
+    <%= link_to 'Edit', edit_article_path(@article) %> |
+    <%= link_to 'Back', articles_path %>
+  </div>
+</div>

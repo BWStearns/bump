@@ -1,0 +1,8 @@
+<h1>It's a Page</h1>
+<% if not user_signed_in? and not analyst_signed_in? %>
+	<%= render 'introhero.html.erb' %>
+<% else %>
+	<p>
+		Welcome to BUMP!  
+	</p>
+<%end%>

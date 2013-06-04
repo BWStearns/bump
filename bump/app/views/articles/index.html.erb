@@ -1,0 +1,51 @@
+<h1>Listing articles</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <!-- <th>Article body</th> -->
+    <th>Author</th>
+    <th>Analyst</th>
+    <th>Outlet</th>
+    <!-- <th>Submitted</th> -->
+    <th>Pubdate</th>
+    <th>State</th>
+    <th>Summary</th>
+    <!-- <th>Url</th> -->
+    <th>LOE</th>
+    <th>Distribution</th>
+    <th>Most important</th>
+    <!-- <th></th>
+    <th></th>
+    <th></th> -->
+  </tr>
+
+<% @articles.each do |article| %>
+      
+      <tr>
+          
+        <td><div class="well"><%= link_to article.title, article %></div></td>
+        <!-- <td><%= article.article_body %></td> -->
+        <td><div class="well"><%= article.author %></div></td>
+        <td><div class="well"><%= article.analyst.name %></div></td>
+        <td><div class="well"><%= article.outlet.name %></div></td>
+        <!-- <td><%= article.submitted %></td> -->
+        <td><div class="well"><%= article.pubdate %></div></td>
+        <td><div class="well"><%= article.state %></div></td>
+        <td><div class="well"><%= article.summary %></div></td>
+        <!-- <td><%= article.url %></td> -->
+        <td><div class="well"><%= article.loe.map(&:name).map(&:inspect).join(', ') %></div></td>
+        <td><div class="well"><%= article.distribution %></div></td>
+        <td><div class="well"><%= article.most_important %></div></td>
+    <!--     <td><%= link_to 'Show', article %></td>
+        <td><%= link_to 'Edit', edit_article_path(article) %></td> -->
+        <!-- <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+
+      </tr>
+
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Article', new_article_path %>

@@ -1,0 +1,42 @@
+<div class="footer">
+	<small>
+		<p>
+			A Barbaricum Production, By Stearns
+		</p>
+		<p>
+			<% if not user_signed_in? and not analyst_signed_in? %>
+			<ul>
+	            <li><%= link_to 'Analyst Login',  new_analyst_session_path %></li>
+	            <li><%= link_to 'Analyst Signup',  new_analyst_registration_path %></li>
+			</ul>
+			<%end%>
+			<% if analyst_signed_in? %>
+			<table>
+				<tr>
+					<td>
+						<%= link_to 'View LOEs',  loes_path %>
+					</td>
+					<td>
+						<%= link_to 'New LOE',  new_lo_path %>
+					</td>
+				</tr>
+				<tr>
+					
+				<td>
+					<%= link_to 'View Outlets',  outlets_path %>
+				</td>
+				<td>
+					<%= link_to 'New Outlet',  new_outlet_path %>
+				</td>
+			</tr>
+		</table>
+
+
+<!-- 			<ul>
+	            <li><%= link_to 'View LOEs',  loes_path %></li>
+	            <li><%= link_to 'New LOE',  new_lo_path %></li>
+			</ul> -->
+			<%end%>
+		</p>
+	</small>
+</div>

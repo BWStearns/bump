@@ -1,0 +1,42 @@
+
+<%= simple_form_for(@article, html: { class: 'form-horizontal'}) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <div class="row">
+      <div class="span4">
+        <%= f.input :title %>
+        <%= f.input :author %>
+        <%= f.input :state %>
+        <%= f.input :submitted %>
+        <%= f.input :pubdate %>
+        <%= f.association :analyst %>
+        <%= f.association :outlet %>
+        <%= f.input :most_important %>
+      </div>
+      <div class="span8">
+        <div class="row">
+          <div span="8">
+        <%= f.input :article_body, input_html: {style: 'height:250px; width:100%;'} %>
+        <%= f.input :summary, input_html: {style: 'height:100px; width:100%;'}%>
+      </div>
+      </div>
+      <div class="row">
+      <div class="span4">
+        <%= f.association :loe %>
+        
+      </div>
+      
+      <div class="span4">
+        <%= f.input :url %>
+        <%= f.input :distribution %>
+        
+      </div>
+    </div>
+    </div>    
+  </div>
+</div>
+  <div class="form-actions">
+    <%= f.button :submit, class: "btn btn-primary" %>
+  </div>
+<% end %>

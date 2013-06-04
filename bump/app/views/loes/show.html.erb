@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @loe.name %>
+</p>
+
+<p>
+  <b>Customer:</b>
+  <%= @loe.customer %>
+</p>
+
+<p>
+  <b>Article:</b>
+  <%= @loe.article %>
+</p>
+
+
+<%= link_to 'Edit', edit_lo_path(@loe) %> |
+<%= link_to 'Back', loes_path %>

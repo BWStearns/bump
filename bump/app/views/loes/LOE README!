@@ -1,0 +1,11 @@
+#LOE README!
+#
+# For some reason Rails saw it fit to chop off the "es" of Loes when building the      
+# model/controller.
+# Because of this when not referring to the table, Loe becomes Lo.
+# Sorry to have screwed it up, but I don't know how to force rails not to 
+# mane guesses about how English works.
+#
+# -- Brian
+#
+#
