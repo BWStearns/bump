@@ -11,7 +11,7 @@
   </tr>
 
 <% @loes.each do |loe| %>
-  <tr>
+  <tr class="well spaceUnder">
     <td><%= loe.name %></td>
     <td><%= loe.customer %></td>
     <td><%= loe.article.map(&:title)%></td>

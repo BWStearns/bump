@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<div class="well">
 <p>
   <b>Name:</b>
   <%= @outlet.name %>
@@ -19,7 +19,7 @@
   <b>State:</b>
   <%= @outlet.state %>
 </p>
-
+</div>
 
 <%= link_to 'Edit', edit_outlet_path(@outlet) %> |
 <%= link_to 'Back', outlets_path %>

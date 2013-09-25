@@ -22,21 +22,21 @@
 
 <% @articles.each do |article| %>
       
-      <tr>
+      <tr class="well spaceUnder">
           
-        <td><div class="well"><%= link_to article.title, article %></div></td>
+        <td><%= link_to article.title, article %></td>
         <!-- <td><%= article.article_body %></td> -->
-        <td><div class="well"><%= article.author %></div></td>
-        <td><div class="well"><%= article.analyst.name %></div></td>
-        <td><div class="well"><%= article.outlet.name %></div></td>
+        <td><%= article.author %></td>
+        <td><%= article.analyst.name %></td>
+        <td><%= article.outlet.name %></td>
         <!-- <td><%= article.submitted %></td> -->
-        <td><div class="well"><%= article.pubdate %></div></td>
-        <td><div class="well"><%= article.state %></div></td>
-        <td><div class="well"><%= article.summary %></div></td>
+        <td><%= article.pubdate %></td>
+        <td><%= article.state %></td>
+        <td><%= article.summary %></td>
         <!-- <td><%= article.url %></td> -->
-        <td><div class="well"><%= article.loe.map(&:name).map(&:inspect).join(', ') %></div></td>
-        <td><div class="well"><%= article.distribution %></div></td>
-        <td><div class="well"><%= article.most_important %></div></td>
+        <td><%= article.loe.map(&:name).map(&:inspect).join(', ') %></td>
+        <td><%= article.distribution %></td>
+        <td><%= article.most_important %></td>
     <!--     <td><%= link_to 'Show', article %></td>
         <td><%= link_to 'Edit', edit_article_path(article) %></td> -->
         <!-- <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->

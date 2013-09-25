@@ -11,31 +11,23 @@
 			</ul>
 			<%end%>
 			<% if analyst_signed_in? %>
-			<table>
-				<tr>
-					<td>
-						<%= link_to 'View LOEs',  loes_path %>
-					</td>
-					<td>
-						<%= link_to 'New LOE',  new_lo_path %>
-					</td>
-				</tr>
-				<tr>
-					
-				<td>
-					<%= link_to 'View Outlets',  outlets_path %>
-				</td>
-				<td>
-					<%= link_to 'New Outlet',  new_outlet_path %>
-				</td>
-			</tr>
-		</table>
+				<table>
+					<tr>
+						<td class="span3">
+							<%= link_to 'View LOEs',  loes_path %>
+						</td>
+						<td class="span3">
+							<%= link_to 'New LOE',  new_lo_path %>
+						</td>
+						<td class="span3">
+							<%= link_to 'View Outlets',  outlets_path %>
+						</td>
+						<td class="span3">
+							<%= link_to 'New Outlet',  new_outlet_path %>
+						</td>
+					</tr>
+				</table>
 
-
-<!-- 			<ul>
-	            <li><%= link_to 'View LOEs',  loes_path %></li>
-	            <li><%= link_to 'New LOE',  new_lo_path %></li>
-			</ul> -->
 			<%end%>
 		</p>
 	</small>
